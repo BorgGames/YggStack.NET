@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>YggStack.Native.Windows.AMD64</PackageId>
+    <Version>0.1.4</Version>
+    <Authors>Victor Nova</Authors>
+    <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <!-- Include native binary in package -->
+  <ItemGroup>
+    <Content Include="runtimes/$(RuntimeIdentifier)/native/yggstack.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackagePath>runtimes/$(RuntimeIdentifier)/native</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>
