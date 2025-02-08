@@ -1,4 +1,4 @@
-[![NuGet](https://img.shields.io/nuget/v/YggStack.svg)](https://www.nuget.org/packages/YggStack/)
+[![NuGet](https://img.shields.io/nuget/v/Yggdrasil.YggStack.svg)](https://www.nuget.org/packages/Yggdrasil.YggStack/)
 
 Enables connecting to Yggdrasil network. Exposes SOCKS 5 proxy.
 
